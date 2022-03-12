@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: sans-serif;
+  background-color: #efefef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.container{
+  max-width: 500px;
+  height: 95vh;
+  margin: 0 auto;
+  padding: 1rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.title{
+  margin: 2rem auto ;
+}
+
+.slider{
+  display: flex;
+  justify-content: conter;
+  align-items: center;
+  gap:1rem;
+}
+
+.slider + .slider{
+  margin-top: 1rem;
+}
+
+.slider input[type="range"]{
+  flex-grow: 1;
+}
+
+.slider label{
+  width: 4rem;
+}
+
+.slider span{
+  width: 2ch;
+}
+
+.passbox{
+  margin-top: 2rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.passbox p{
+  padding: 3px;
+  margin: 2rem auto 2rem;
+  width: 33ch;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+  border-radius: 10px;
+  font-size: 1.75rem;
+  word-break: break-all;
+  
+}
+
+.passbox .letter{
+  color: #ff4f19;
+}
+
+.passbox .digit{
+  color: #1985ff;
+}
+
+.action{
+  display: flex;
+  justify-content: center;
+
+}
+
+.copy-pass{
+  margin-top: 2rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #1985ff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.copy-pass:hover{
+  background-color: #1154a1;
+  cursor: pointer;
 }
