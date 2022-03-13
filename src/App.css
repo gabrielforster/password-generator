@@ -71,6 +71,10 @@ body{
 }
 
 .passbox .letter{
+  color: #525252;
+}
+
+.passbox .symbol{
   color: #ff4f19;
 }
 
@@ -81,7 +85,6 @@ body{
 .action{
   display: flex;
   justify-content: center;
-
 }
 
 .copy-pass{
