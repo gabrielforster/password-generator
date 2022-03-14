@@ -3,9 +3,9 @@ import '../App.css'
 
 export const CopyPassword = ({password}) => {
 
-    const copyPass = () =>{
-        navigator.clipboard.writeText(password)
-    }
+  const copyPass = () =>{
+      navigator.clipboard.writeText(password)
+  }
 
   return (
     <div className='action'>

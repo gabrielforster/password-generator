@@ -3,6 +3,7 @@ import { CopyPassword } from './CopyPassword'
 import { PassBox } from './PassBox'
 
 
+
 export const PasswordGen = () => {
   const [password, setPassword] = useState("")
   const [passLength, setPassLength] = useState (8)
@@ -19,9 +20,9 @@ export const PasswordGen = () => {
     draftPassword.push(...Array.from({ length: passSymbols }, randomSymbol))
     draftPassword.push(...Array.from({ length: lettersLength }, randomLetter))
 
-
     setPassword(draftPassword.slice(0, passLength).sort(() => Math.random() -0.5).join(""))
-  }, [passLength, passDigits, passSymbols])
+  },
+  [passLength, passDigits, passSymbols])
 
   const randomDigit = () =>{
     const digits = "0123456789"
@@ -54,17 +55,17 @@ export const PasswordGen = () => {
       </div>
 
       <div className='slider'>
-      <label htmlFor="passwordDigits">Digitos</label>
-      <input id="passwordDigits" type="range" min={0} max={10} value={passDigits} onChange={({target})=>{setPassDigits(parseInt(target.value))}} 
-      />
-      <span>{passDigits}</span>
+        <label htmlFor="passwordDigits">Digitos</label>
+        <input id="passwordDigits" type="range" min={0} max={10} value={passDigits} onChange={({target})=>{setPassDigits(parseInt(target.value))}} 
+        />
+        <span>{passDigits}</span>
       </div>
 
       <div className='slider'>
-      <label htmlFor="passwordSymbols">Símbolos</label>
-      <input id="passwordSymbols" type="range" min={0} max={10} value={passSymbols} onChange={({target})=>{setPassSymbols(parseInt(target.value))}} 
-      />
-      <span>{passSymbols}</span>
+        <label htmlFor="passwordSymbols">Símbolos</label>
+        <input id="passwordSymbols" type="range" min={0} max={10} value={passSymbols} onChange={({target})=>{setPassSymbols(parseInt(target.value))}} 
+        />
+        <span>{passSymbols}</span>
       </div>
 
       
